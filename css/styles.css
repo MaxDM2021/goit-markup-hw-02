@@ -1,3 +1,16 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
 
 
 /* основной цвет текста черный #212121 */
@@ -19,7 +32,7 @@
 
 
 body {
-background-color: var(--second-backrgound-color);
+background-color: var(--title-text-color);
 color: var(--primary-text-color);
  font-family: Roboto,
  sans-serif;
@@ -30,7 +43,20 @@ color: var(--primary-text-color);
 
 ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
    
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1230px;
+    outline: 2px solid tomato;
+}
+
+.page-header {
+
 }
 
 .logo {
@@ -89,28 +115,35 @@ text-decoration: none;
 
 .hero {
 background-color: var(--primary-background-color);
-
+text-align: center;
 }
 .hero-title {
+margin-top: 0px;
+margin-bottom: 30px;
+
     color: var(--title-text-color);  
 font-weight: 900;
 font-size: 44px;
 line-height: 1.36;
-text-align: center;
+
 text-transform: uppercase;
 letter-spacing: 0.06em;
 }
 
 /* Button */
 .button {
+    display: inline-block;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 22px;
  font-family: Roboto,
  sans-serif;
 font-style: normal;
 font-weight: 500;
 font-size: 16px;
 line-height: 1.63;
-text-align: center;
 letter-spacing: 0.03em;
+background-color: var(--second-backrgound-color);
 
 
 }
@@ -118,9 +151,10 @@ letter-spacing: 0.03em;
 .button.primery {
     color: var(--title-text-color);
     background-color: var(--accent-color);
+    padding: 10px 32px;
     font-weight: 700;
     line-height: 1.88;
-    display: flex;
+  
 align-items: center;
 text-align: center;
 letter-spacing: 0.06em;
@@ -132,7 +166,7 @@ letter-spacing: 0.06em;
 
 .button.secondary {
     color: var(--primary-text-color);
-background-color: var(--second-backrgound-color);
+
 }
 
 .button.secondary:hover,
@@ -144,6 +178,8 @@ background-color: var(--second-backrgound-color);
 /* Features */
 
 .feature-list {
+margin-top: 0px;
+margin-bottom: 0px;
     color: var(--second-text-color);
 font-weight: normal;
 font-size: 14px;
@@ -151,6 +187,8 @@ line-height: 1.71;
 }
 
 .feature-list .titel {
+    margin-top: 0px;
+margin-bottom: 0px;
   color: var(--primary-text-color);
 font-weight: 700;
 font-size: 14px;
